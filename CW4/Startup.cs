@@ -9,8 +9,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Wyklad4.Services;
 
-namespace CW4
+namespace Wyklad4
 {
     public class Startup
     {
@@ -24,6 +25,8 @@ namespace CW4
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //AddSingleton, AddTransient, AddScoped
+            services.AddScoped<IStudentsDal, SqlServerDbDal>();
             services.AddControllers();
         }
 
