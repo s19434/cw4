@@ -11,14 +11,14 @@ namespace CW4.DAL
         private static IEnumerable<Student> _students;
         static MockDbService()
         {
-            // _students = new List<Student>
-            //
-            //     {
-            //        new Student{IdStudent=1, FirstName="ANN", LastName="SMITH"},
-            //        new Student{IdStudent=2, FirstName="DEN", LastName="PETERSEN"},
-            //        new Student{IdStudent=3, FirstName="PETER", LastName="PARKER"},
-            //
-            //    };
+             _students = new List<Student>
+            
+                 {
+                   new Student(1, "Jan", "Kowalski"),
+                   new Student(2, "Anna", "Malewski"),
+                   new Student(3, "Andrzej", "Andrzejewicz")
+
+                };
         }
 
         public IEnumerable<Student> GetStudents()
