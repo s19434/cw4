@@ -9,9 +9,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Wyklad4.Services;
+using CW4.DAL;
 
-namespace Wyklad4
+namespace CW4
 {
     public class Startup
     {
@@ -26,7 +26,7 @@ namespace Wyklad4
         public void ConfigureServices(IServiceCollection services)
         {
             //AddSingleton, AddTransient, AddScoped
-            services.AddScoped<IStudentsDal, SqlServerDbDal>();
+            services.AddScoped<IDbService, MockDbService>();
             services.AddControllers();
         }
 

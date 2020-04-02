@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using CW4.Models;
 
-namespace Wyklad4.Services
+namespace CW4.DAL
 {
-    public interface IStudentsDal
+    public interface IDbService
     {
         public IEnumerable<Student> GetStudents();
     }
